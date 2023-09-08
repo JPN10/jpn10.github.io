@@ -1,18 +1,47 @@
 Rancho Mirage CSS Kiosk
-<div class="logo"><img src="logo.png" /></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Boxes</title>
+    <style>
+        /* Add basic styling for the boxes */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
-<div class="split left">
-<div class="centered">
-<h1><a href="https://ranchomirageca-energovweb.tylerhost.net/apps/selfservice#/home">Citizen Self Service</a></h1>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            color: #fff;
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-<h3><a href="https://ranchomirageca-energovweb.tylerhost.net/apps/selfservice#/home">Click here to fill out or track a permit, plan, or license.</a></h3>
-</div>
-</div>
+        .box:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.example.com" target="_blank">
+        <div class="box">
+            Box 1 - Visit Example.com
+        </div>
+    </a>
 
-<div class="split right">
-<div class="centered">
-<h1><a href="https://ranchomirageca.justfoia.com/publicportal/home/newrequest">Public Record Request</a></h1>
-
-<h3><a href="https://ranchomirageca.justfoia.com/publicportal/home/newrequest">Click here to fill out or track a public record request.</a></h3>
-</div>
-</div>
+    <a href="https://www.openai.com" target="_blank">
+        <div class="box">
+            Box 2 - Visit OpenAI.com
+        </div>
+    </a>
+</body>
+</html>
