@@ -1,49 +1,58 @@
-Rancho Mirage CSS Kiosk
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Boxes</title>
+    <title>Flyer Page</title>
     <style>
-        /* Add basic styling for the boxes */
+        /* Basic styling for header */
+        header {
+            background-image: url('https://ranchomirageca.gov/wp-content/uploads/2023/04/CRMWebsiteLogo-1-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+
+        /* Basic styling for the body */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+            background-image: url('https://ranchomirageca.gov/wp-content/uploads/2022/04/Slider-City-Hall-aerial.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
         }
 
-        .box {
+        /* Styling for flyer boxes */
+        .flyer-box {
             width: 200px;
-            height: 100px;
-            background-color: #3498db;
-            color: #fff;
-            display: inline-block;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid white;
+            border-radius: 10px;
             margin: 20px;
-            padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .box:hover {
-            background-color: #2980b9;
+            display: inline-block;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <a href="https://www.example.com" target="_blank">
-        <div class="box">
-            Box 1 - Visit Example.com
-        </div>
-    </a>
+    <!-- Header with background image -->
+    <header>
+        <!-- You can add content or links inside the header if needed -->
+    </header>
 
-    <a href="jpn10.github.io/survivor
-/image000000.jpg" target="jpn10.github.io/survivor
-/image000000.jpg">
-        <div class="box">
-            Box 2 - Visit OpenAI.com
-        </div>
-    </a>
+    <!-- Two flyer boxes -->
+    <div class="flyer-box">
+        <h2>Flyer 1</h2>
+        <!-- You can add flyer content or links here -->
+    </div>
+
+    <div class="flyer-box">
+        <h2>Flyer 2</h2>
+        <!-- You can add flyer content or links here -->
+    </div>
 </body>
 </html>
