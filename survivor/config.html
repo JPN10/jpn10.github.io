@@ -3,9 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Display</title>
+    <title>NFL Survivor Pool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .pick-form {
+            text-align: center;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <img src="https://jpn10.github.io/survivor/image000000.jpg">
+    <h1>NFL Survivor Pool</h1>
+
+    <!-- Week selection form -->
+    <div class="pick-form">
+        <label for="week">Select Week:</label>
+        <select id="week">
+            <option value="week1">Week 1</option>
+            <option value="week2">Week 2</option>
+            <!-- Add more weeks as needed -->
+        </select>
+        <button onclick="makePick()">Make Pick</button>
+    </div>
+
+    <!-- Display picks and remaining choices -->
+    <h2>Your Picks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Your Pick</th>
+                <th>Remaining Choices</th>
+            </tr>
+        </thead>
+        <tbody id="pick-table">
+            <!-- Picks and remaining choices will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        // JavaScript function to handle making picks
+        function makePick() {
+            const week = document.getElementById('week').value;
+            
+            // Check if the week has already been selected
+            if (document.getElementById(week)) {
+                alert('You have already made a pick for this week.');
+                return;
+            }
+
+            const pick = prompt(`Enter your pick for ${week}:`);
+            if (pick !== null && pick.trim() !== '') {
+                // Create a new row for the table
+                const newRow = document.createElement('tr');
+                newRow.id = week;
+
+                // Add data to the row
+                newRow.innerHTML = `
+                    <td>${week}</td>
+                    <td>${pick}</td>
+                    <td>Remaining choices go here</td>
+                `;
+
+                // Add the row to the table
+                const pickTable = document.getElementById('pick-table');
+                pickTable.appendChild(newRow);
+
+                // Clear the selection
+                document.getElementById('week').value = '';
+            }
+        }
+    </script>
 </body>
 </html>
